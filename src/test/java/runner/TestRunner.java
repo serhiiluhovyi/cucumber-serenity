@@ -6,15 +6,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"features"},
-		glue = {"steps"},
-		plugin = {"pretty", "html:CucumberReport"},
-		dryRun = false,
-		strict = true,
-		monochrome = true
+    features = {"src/test/resources/features"},
+    glue = {"steps", "common", "hooks"},
+    plugin = {"pretty", "html:CucumberReport"},
+    dryRun = false,
+    strict = true,
+    monochrome = true
 //		tags = {"@P1 and @P2"}
-		//name = {"Logo"}
-		)
+    //name = {"Logo"}
+)
 public class TestRunner {
 
 }
