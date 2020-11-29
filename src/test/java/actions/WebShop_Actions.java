@@ -45,12 +45,4 @@ public class WebShop_Actions {
     public int getTheQuantityOfTheProduct(){
         return webshop_elements.cartItemRows.size();
     }
-
-
-
-
-
-
-
-
 }

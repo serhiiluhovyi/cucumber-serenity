@@ -28,35 +28,29 @@ public class WebShop_Steps {
     @And("I click on Books Category")
     public void iClickOnBooksCategory() {
         webshop_actions.clickOnBooksCategory();
-
     }
 
     @When("I add to cart the first book")
     public void iAddToCartTheFirstBook() throws InterruptedException {
         webshop_actions.addToCartFirstBook();
         Thread.sleep(1000);
-
     }
 
     @Then("I click on the shopping cart")
     public void iClickOnTheShoppingCart() throws InterruptedException {
         webshop_actions.clickOnTheShoppingCart();
         Thread.sleep(1000);
-
     }
 
     @And("I check that book is in the cart")
     public void iCheckThatBookIsInTheCart() throws InterruptedException {
         webshop_actions.bookIsInTheCart();
         Thread.sleep(1000);
-
-
     }
 
     @When("I add to cart the fifth book")
     public void iAddToCartTheFifthBook() {
         webshop_actions.addToCartFifthBook();
-
     }
 
     @And("I click on Jewelry Category")
@@ -67,15 +61,14 @@ public class WebShop_Steps {
     @And("I add to cart the second jewelry")
     public void iAddToCartTheSecondJewelry() {
         webshop_actions.addToCartSecondJewelry();
-
     }
 
     @And("I check the quantity {int} of the product")
     public void iCheckTheQuantityOfTheProduct(int count) {
         int actualCount = webshop_actions.getTheQuantityOfTheProduct();
 
-        if (actualCount !=count) {
-            fail("Incorrect quantity" + count + " results shown");
+        if (actualCount != count) {
+            fail("Incorrect quantity" + count + " results shown. The actual count was " + actualCount);
         }
 
     }
