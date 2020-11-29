@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
     plugin = {"pretty", "html:CucumberReport"},
     dryRun = false,
     strict = true,
-    monochrome = true
-//		tags = {"@P1 and @P2"}
+    monochrome = true,
+    tags = {"@P111"}
     //name = {"Logo"}
 )
 public class TestRunner {
